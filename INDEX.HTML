@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nifty 50 Trading Dashboard</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f1f5f9;
+      color: #1f2937;
+    }
+    .modal {
+      display: none; /* Hidden by default, toggled via JavaScript */
+      background-color: rgba(0, 0, 0, 0.6);
+      position: fixed;
+      inset: 0;
+      z-index: 50;
+      transition: opacity 0.3s ease;
+    }
+    .modal.show {
+      display: flex;
+    }
+    .table-container {
+      max-height: 400px;
+      overflow-y: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #e5e7eb;
+    }
+    th {
+      background-color: #e5e7eb;
+      font-weight: 600;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+    tr {
+      transition: background-color 0.2s ease;
+    }
+    tr:hover {
+      background-color: #f9fafb;
+    }
+    .error-message {
+      transition: opacity 0.3s ease;
+    }
+    .error-message.hidden {
+      opacity: 0;
+      display: none;
+    }
+    .fade-in {
+      animation: fadeIn 0.5s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <div class="container mx-auto p-6 max-w-7xl">
+    <!-- Header -->
+    <h1 class="text-4xl font-bold text-center mb-8 text-blue-700">
+      Nifty 50 Trading Dashboard
+    </h1>
+
+    <!-- Start Button and Status -->
+    <div class="flex flex-col sm:flex-row justify-between items-center mb-6 gap-4">
+      <button id="startTrading" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition duration-200 shadow-md">
+        Start Trading
+      </button>
+      <div class="text-lg font-semibold">
+        Status: <span id="status" class="text-green-500">Idle</span>
+      </div>
+    </div>
+
+    <!-- Error Message -->
+    <div id="errorMessage" class="bg-red-100 text-red-700 p-4 rounded-lg mb-6 hidden error-message">
+      Failed to start trading: Invalid access token
+    </div>
+
+    <!-- Trading Rules -->
+    <div class="bg-yellow-50 p-6 rounded-lg mb-8 shadow-md fade-in">
+      <h2 class="text-2xl font-semibold mb-3 text-yellow-800">Trading Rules</h2>
+      <ul class="list-disc pl-5 text-gray-700">
+        <li>Start trades only after 9:25 AM.</li>
+        <li>Do not trade after 2:50 PM.</li>
+        <li>Only one stop-loss trade allowed per day.</li>
+        <li>Follow the rules strictly.</li>
+      </ul>
+    </div>
+
+    <!-- Signals Table -->
+    <div class="table-container bg-white rounded-lg">
+      <table class="w-full">
+        <thead>
+          <tr>
+            <th>Time</th>
+            <th>Type</th>
+            <th>Strike</th>
+            <th>CE Entry</th>
+            <th>PE Entry</th>
+            <th>SL</th>
+            <th>Target</th>
+            <th>Lots</th>
+            <th>Direction</th>
+            <th>Score</th>
+            <th>Fib Level</th>
+            <th>Expiry</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="fade-in">
+            <td>18:28:00</td>
+            <td>Straddle</td>
+            <td>23850.00</td>
+            <td>₹150.25</td>
+            <td>₹145.75</td>
+            <td>₹200.50</td>
+            <td>₹350.75</td>
+            <td>1</td>
+            <td>Neutral</td>
+            <td>3</td>
+            <td>50.0%</td>
+            <td>2025-05-28</td>
+          </tr>
+          <!-- Add more rows dynamically with JavaScript in production -->
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Token Input Modal -->
+    <div id="tokenModal" class="modal">
+      <div class="bg-white p-8 rounded-lg shadow-xl w-full max-w-md">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800">Enter Upstox Access Token</h2>
+        <input
+          id="accessToken"
+          type="text"
+          placeholder="Paste your access token here"
+          class="w-full p-3 border border-gray-300 rounded-lg mb-4 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        />
+        <div class="flex justify-end space-x-3">
+          <button id="submitToken" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">
+            Submit
+          </button>
+          <button id="cancelToken" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-lg hover:bg-gray-400 transition">
+            Cancel
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Modal toggle functionality
+    const modal = document.getElementById('tokenModal');
+    const startTradingBtn = document.getElementById('startTrading');
+    const submitTokenBtn = document.getElementById('submitToken');
+    const cancelTokenBtn = document.getElementById('cancelToken');
+    const status = document.getElementById('status');
+    const errorMessage = document.getElementById('errorMessage');
+    const accessTokenInput = document.getElementById('accessToken');
+
+    startTradingBtn.addEventListener('click', () => {
+      modal.classList.add('show');
+    });
+
+    submitTokenBtn.addEventListener('click', () => {
+      if (accessTokenInput.value.trim() === '') {
+        errorMessage.classList.remove('hidden');
+        setTimeout(() => errorMessage.classList.add('hidden'), 3000);
+      } else {
+        status.textContent = 'Running';
+        status.classList.replace('text-green-500', 'text-blue-500');
+        modal.classList.remove('show');
+        accessTokenInput.value = '';
+      }
+    });
+
+    cancelTokenBtn.addEventListener('click', () => {
+      modal.classList.remove('show');
+      accessTokenInput.value = '';
+    });
+  </script>
+</body>
+</html>

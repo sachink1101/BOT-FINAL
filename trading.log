@@ -1,0 +1,41 @@
+2025-05-22 13:04:04,712 - INFO - Upstox config saved to file
+2025-05-22 13:04:04,717 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2025-05-22 13:04:05,273 - DEBUG - https://api.telegram.org:443 "GET /bot7734973822:AAF4bD4SxEqJ4CKaJzakF4gRD4vIZp8bS_8/getMe HTTP/1.1" 200 246
+2025-05-22 13:04:05,273 - INFO - Telegram Bot Token validated
+2025-05-22 13:04:05,273 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2025-05-22 13:04:05,989 - DEBUG - https://api.telegram.org:443 "POST /bot7734973822:AAF4bD4SxEqJ4CKaJzakF4gRD4vIZp8bS_8/sendMessage HTTP/1.1" 200 319
+2025-05-22 13:04:05,990 - INFO - Telegram Chat ID validated
+2025-05-22 13:04:20,415 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:04:20,550 - DEBUG - https://api.upstox.com:443 "GET /v2/user/profile HTTP/1.1" 200 None
+2025-05-22 13:04:20,550 - INFO - Access token validated successfully
+2025-05-22 13:04:20,552 - INFO - Access token saved to file
+2025-05-22 13:04:20,553 - INFO - Last token date saved
+2025-05-22 13:04:20,553 - INFO - New access token validated and saved
+2025-05-22 13:04:20,554 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:04:20,729 - DEBUG - https://api.upstox.com:443 "GET /v2/option/contract?instrument_key=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-22 13:04:20,755 - INFO - Expiry day detected, using next expiry: 2025-06-05
+2025-05-22 13:04:20,756 - INFO - Starting intraday trading for Nifty 50 with Upstox API (Expiry: 2025-06-05)...
+2025-05-22 13:04:20,757 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:04:21,001 - DEBUG - https://api.upstox.com:443 "GET /v2/option/chain?instrument_key=NSE_INDEX%7CNifty+50&expiry_date=2025-06-05 HTTP/1.1" 200 None
+2025-05-22 13:04:21,005 - INFO - Option chain fetched for expiry 2025-06-05: 92 strikes
+2025-05-22 13:04:21,008 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:04:21,129 - DEBUG - https://api.upstox.com:443 "GET /v2/market-quote/quotes?symbol=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-22 13:04:21,131 - INFO - Fetched spot price: 24519.2
+2025-05-22 13:04:21,131 - DEBUG - Calculated indicators: {'rsi': 50, 'macd': 53.38347578347748, 'signal': 10.676695156695496, 'bb_upper': 24175.157517301475, 'bb_lower': 23591.762482698523, 'vwap': 23883.46, 'atr': 50}
+2025-05-22 13:04:21,131 - DEBUG - Spot price: 24519.2, Selected ATM strike: 24500.0
+2025-05-22 13:04:21,133 - DEBUG - Fibonacci levels: {'38.2%': 24263.5656, '50.0%': 24184.6, '61.8%': 24105.6344, 'high': 24519.2, 'low': 23850.0}
+2025-05-22 13:04:21,133 - DEBUG - Sentiment analysis with Fibonacci: {'pcr': 0.9574, 'support': 24105.6344, 'resistance': 24263.5656, 'iv': 15.760000000000002, 'atm_strike': 24500.0, 'call_instrument_key': 'NSE_FO|40467', 'put_instrument_key': 'NSE_FO|40468', 'call_bid_price': 352.25, 'put_bid_price': 257.0, 'call_ask_price': 353.6, 'put_ask_price': 258.05, 'oi_total': 550950.0, 'direction': 'Bullish', 'direction_score': 1, 'fib_levels': {'38.2%': 24263.5656, '50.0%': 24184.6, '61.8%': 24105.6344, 'high': 24519.2, 'low': 23850.0}}
+2025-05-22 13:04:21,133 - DEBUG - Checking market context: VIX = 15.765398491363076
+2025-05-22 13:04:21,134 - DEBUG - No confirmed trade: Score=5, Conditions=['Recent move up (669.20)', 'Above VWAP (24519.20 > 23883.46)', 'MACD bullish (53.38 > 10.68)', 'RSI not overbought (50.00)', 'Sentiment bullish (1.00)']
+2025-05-22 13:05:21,135 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:05:21,319 - DEBUG - https://api.upstox.com:443 "GET /v2/option/chain?instrument_key=NSE_INDEX%7CNifty+50&expiry_date=2025-06-05 HTTP/1.1" 200 None
+2025-05-22 13:05:21,324 - INFO - Option chain fetched for expiry 2025-06-05: 92 strikes
+2025-05-22 13:05:21,326 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-22 13:05:21,438 - DEBUG - https://api.upstox.com:443 "GET /v2/market-quote/quotes?symbol=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-22 13:05:21,438 - INFO - Fetched spot price: 24519.4
+2025-05-22 13:05:21,439 - DEBUG - Calculated indicators: {'rsi': 50, 'macd': 94.61573201516512, 'signal': 27.464502528389424, 'bb_upper': 24318.51000498041, 'bb_lower': 23515.34999501959, 'vwap': 23916.93, 'atr': 50}
+2025-05-22 13:05:21,439 - DEBUG - Spot price: 24519.4, Selected ATM strike: 24500.0
+2025-05-22 13:05:21,440 - DEBUG - Fibonacci levels: {'38.2%': 24263.6892, '50.0%': 24184.7, '61.8%': 24105.7108, 'high': 24519.4, 'low': 23850.0}
+2025-05-22 13:05:21,440 - DEBUG - Sentiment analysis with Fibonacci: {'pcr': 0.9587, 'support': 24105.7108, 'resistance': 24263.6892, 'iv': 15.754999999999999, 'atm_strike': 24500.0, 'call_instrument_key': 'NSE_FO|40467', 'put_instrument_key': 'NSE_FO|40468', 'call_bid_price': 353.25, 'put_bid_price': 255.75, 'call_ask_price': 354.2, 'put_ask_price': 256.75, 'oi_total': 551925.0, 'direction': 'Bullish', 'direction_score': 1, 'fib_levels': {'38.2%': 24263.6892, '50.0%': 24184.7, '61.8%': 24105.7108, 'high': 24519.4, 'low': 23850.0}}
+2025-05-22 13:05:21,442 - DEBUG - Checking market context: VIX = 15.69205726273566
+2025-05-22 13:05:21,442 - DEBUG - No confirmed trade: Score=5, Conditions=['Recent move up (669.40)', 'Above VWAP (24519.40 > 23916.93)', 'MACD bullish (94.62 > 27.46)', 'RSI not overbought (50.00)', 'Sentiment bullish (1.00)']
