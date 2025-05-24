@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authenticate Upstox</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.7); }
+            100% { box-shadow: 0 0 10px rgba(255, 215, 0, 0.3); }
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .pulse-glow {
+            animation: pulseGlow 2s infinite;
+        }
+        .gradient-shift {
+            background: linear-gradient(90deg, #FFD700, #FBBF24, #D97706, #FBBF24, #FFD700);
+            background-size: 200% 200%;
+            animation: gradientShift 8s ease infinite;
+        }
+        .hover-scale {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-scale:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 25px rgba(255, 215, 0, 0.5);
+        }
+        .custom-input {
+            transition: all 0.3s ease;
+        }
+        .custom-input:focus {
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+        }
+        .spinner {
+            display: inline-block;
+            width: 1.5rem;
+            height: 1.5rem;
+            border: 3px solid rgba(255, 215, 0, 0.3);
+            border-top-color: #FFD700;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+        body {
+            background: radial-gradient(circle at center, #1F2937 0%, #111827 100%);
+        }
+        #tokenDisplay {
+            word-break: break-all;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-100 min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-6 max-w-md">
+        <h1 class="text-5xl font-extrabold text-center mb-10 text-transparent bg-clip-text gradient-shift fade-in">Authenticate Upstox</h1>
+        <div class="bg-gray-800 bg-opacity-80 backdrop-blur-lg p-8 rounded-2xl shadow-2xl pulse-glow hover-scale fade-in" style="animation-delay: 0.2s;">
+            <p class="text-center mb-6 text-lg font-light">
+                <a href="https://api.upstox.com/v2/login/authorization/dialog?client_id=20a9634a-4477-4801-812b-49089539fdf0&redirect_uri=https://127.0.0.1" class="text-amber-400 hover:text-amber-300 font-semibold transition-colors duration-300 underline decoration-amber-400 decoration-2" target="_blank">Click to Authorize</a>
+            </p>
+            <form id="authForm" class="mt-6 space-y-4">
+                <label for="code" class="block text-lg font-medium text-gray-200">Enter Authorization Code:</label>
+                <input 
+                    type="text" 
+                    id="code" 
+                    name="code" 
+                    class="border border-amber-500 bg-gray-900 bg-opacity-50 text-gray-100 p-4 rounded-lg w-full focus:outline-none focus:ring-2 focus:ring-amber-400 custom-input pulse-glow" 
+                    placeholder="Enter your code here"
+                    required
+                >
+                <button 
+                    type="submit" 
+                    class="w-full gradient-shift text-white px-4 py-3 rounded-lg font-semibold hover:shadow-xl transition-all pulse-glow"
+                >
+                    Submit
+                </button>
+            </form>
+            <div id="tokenDisplay" class="mt-4 text-sm text-gray-200 font-light"></div>
+            <a 
+                href="/" 
+                class="block text-center mt-6 bg-gray-700 bg-opacity-50 text-gray-100 px-4 py-3 rounded-lg font-semibold hover:bg-gray-600 transition-all hover-scale"
+            >
+                Back to Home
+            </a>
+        </div>
+        <p class="text-center mt-8 text-sm text-gray-400 fade-in" style="animation-delay: 0.4s;">
+            Powered by <span class="text-amber-400 font-semibold">Upstox</span>
+        </p>
+    </div>
+    <script>
+        document.getElementById('authForm').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const code = document.getElementById('code').value;
+            const tokenDisplay = document.getElementById('tokenDisplay');
+            tokenDisplay.innerHTML = '<span class="spinner"></span> Fetching access token...';
+
+            try {
+                const response = await fetch('/auth', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                    body: `code=${encodeURIComponent(code)}`
+                });
+                const data = await response.json();
+
+                if (data.status === 'success' && data.access_token) {
+                    tokenDisplay.innerHTML = `<span class="text-amber-400">Access Token:</span> ${data.access_token}`;
+                    setTimeout(() => {
+                        window.location.href = '/';
+                    }, 5000);
+                } else {
+                    tokenDisplay.innerHTML = `<span class="text-red-400">Error:</span> ${data.message || 'Failed to retrieve access token. Check your authorization code.'}`;
+                }
+            } catch (error) {
+                tokenDisplay.innerHTML = `<span class="text-red-400">Error:</span> Network error or invalid request. Please try again.`;
+                console.error('Error fetching token:', error);
+            }
+        });
+    </script>
+</body>
+</html>

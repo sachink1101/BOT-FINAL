@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trading Bot Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom golden styles */
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px rgba(234, 179, 8, 0.5); }
+            50% { text-shadow: 0 0 20px rgba(234, 179, 8, 0.8), 0 0 30px rgba(234, 179, 8, 0.4); }
+            100% { text-shadow: 0 0 5px rgba(234, 179, 8, 0.5); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(234, 179, 8, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(234, 179, 8, 0); }
+        }
+        .animate-glow {
+            animation: glow 2s infinite;
+        }
+        .animate-fadeInUp {
+            animation: fadeInUp 0.6s ease-out;
+        }
+        .btn-glow {
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        .btn-glow:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 0 20px rgba(234, 179, 8, 0.5);
+        }
+        .btn-glow::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: 0.5s;
+        }
+        .btn-glow:hover::after {
+            left: 100%;
+        }
+        .card-gold {
+            background: rgba(17, 24, 39, 0.9); /* Dark base for contrast */
+            border: 1px solid rgba(234, 179, 8, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-gold:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 0 30px rgba(234, 179, 8, 0.4);
+            animation: pulse 1.5s infinite;
+        }
+        body {
+            background: linear-gradient(135deg, #1f2937 0%, #111827 100%); /* Dark gradient for elegance */
+        }
+    </style>
+</head>
+<body class="text-gray-100 font-sans min-h-screen flex items-center justify-center">
+    <div class="container mx-auto p-8 max-w-5xl">
+        <h1 class="text-5xl font-extrabold mb-10 text-center text-yellow-500 animate-glow">Trading Bot Dashboard</h1>
+        
+        <!-- Trading Status Card -->
+        <div class="card-gold p-8 rounded-2xl mb-8 animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-6 text-yellow-400">Trading Status</h2>
+            <p class="text-xl">Status: <span id="status" class="font-bold text-yellow-300">{{ "Active" if trading_active else "Inactive" }}</span></p>
+            <div class="flex flex-wrap gap-4 mt-6">
+                <button id="startBtn" class="bg-gradient-to-r from-green-600 to-green-800 text-white px-6 py-3 rounded-lg btn-glow" {% if trading_active %}disabled{% endif %}>Start Trading</button>
+                <button id="stopBtn" class="bg-gradient-to-r from-red-600 to-red-800 text-white px-6 py-3 rounded-lg btn-glow" {% if not trading_active %}disabled{% endif %}>Stop Trading</button>
+                <a href="/auth" class="bg-gradient-to-r from-yellow-600 to-yellow-800 text-white px-6 py-3 rounded-lg btn-glow inline-block">Authenticate</a>
+                <a href="/dashboard" class="bg-gradient-to-r from-purple-600 to-purple-800 text-white px-6 py-3 rounded-lg btn-glow inline-block">View Dashboard</a>
+            </div>
+        </div>
+
+        <!-- Market Data Card -->
+        <div class="card-gold p-8 rounded-2xl animate-fadeInUp">
+            <h2 class="text-3xl font-semibold mb-6 text-yellow-400">Market Data</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <p class="text-lg">Nifty Spot: <span id="nifty_spot" class="font-medium text-yellow-200">-</span></p>
+                <p class="text-lg">VIX: <span id="vix" class="font-medium text-yellow-200">-</span></p>
+                <p class="text-lg">Last Update: <span id="last_update" class="font-medium text-yellow-200">-</span></p>
+            </div>
+            <h3 class="text-2xl font-semibold mt-8 text-yellow-400">Indicators</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-4">
+                <p>RSI (1min): <span id="rsi_1min" class="font-medium text-yellow-200">-</span></p>
+                <p>MACD (1min): <span id="macd_1min" class="font-medium text-yellow-200">-</span></p>
+                <p>ATR (1min): <span id="atr_1min" class="font-medium text-yellow-200">-</span></p>
+            </div>
+            <h3 class="text-2xl font-semibold mt-8 text-yellow-400">Sentiment</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+                <p>PCR: <span id="pcr" class="font-medium text-yellow-200">-</span></p>
+                <p>Support: <span id="support" class="font-medium text-yellow-200">-</span></p>
+                <p>Resistance: <span id="resistance" class="font-medium text-yellow-200">-</span></p>
+                <p>Direction: <span id="direction" class="font-medium text-yellow-200">-</span></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function updateMarketData() {
+            fetch('/market_data')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('nifty_spot').innerText = data.nifty_spot.toFixed(2);
+                    document.getElementById('vix').innerText = data.vix.toFixed(2);
+                    document.getElementById('last_update').innerText = data.last_update;
+                    if (data.indicators) {
+                        document.getElementById('rsi_1min').innerText = data.indicators.rsi_1min.toFixed(2);
+                        document.getElementById('macd_1min').innerText = data.indicators.macd_1min.toFixed(2);
+                        document.getElementById('atr_1min').innerText = data.indicators.atr_1min.toFixed(2);
+                    }
+                    if (data.sentiment) {
+                        document.getElementById('pcr').innerText = data.sentiment.pcr.toFixed(2);
+                        document.getElementById('support').innerText = data.sentiment.support.toFixed(2);
+                        document.getElementById('resistance').innerText = data.sentiment.resistance.toFixed(2);
+                        document.getElementById('direction').innerText = data.sentiment.direction;
+                    }
+                });
+        }
+
+        document.getElementById('startBtn').addEventListener('click', () => {
+            fetch('/start_trading', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.status === 'success') {
+                        document.getElementById('status').innerText = 'Active';
+                        document.getElementById('startBtn').disabled = true;
+                        document.getElementById('stopBtn').disabled = false;
+                    }
+                });
+        });
+
+        document.getElementById('stopBtn').addEventListener('click', () => {
+            fetch('/stop_trading', { method: 'POST' })
+                .then(response => response.json())
+                .then(data => {
+                    alert(data.message);
+                    if (data.status === 'success') {
+                        document.getElementById('status').innerText = 'Inactive';
+                        document.getElementById('startBtn').disabled = false;
+                        document.getElementById('stopBtn').disabled = true;
+                    }
+                });
+        });
+
+        setInterval(updateMarketData, 5000);
+        updateMarketData();
+    </script>
+</body>
+</html>

@@ -1,4 +1,5 @@
-requests==2.32.3
-pandas==2.2.3
+flask==2.3.3
+requests==2.31.0
+pandas==2.2.2
 numpy==1.26.4
-ta-lib==0.4.32
+TA-Lib==0.4.28
