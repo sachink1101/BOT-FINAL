@@ -3,7 +3,7 @@ import json
 import requests
 import pandas as pd
 import numpy as np
-import ta
+import talib
 import time
 from datetime import datetime, date, timedelta
 import logging

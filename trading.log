@@ -1,0 +1,87 @@
+2025-05-25 12:43:49,341 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.119.58:5000
+2025-05-25 12:43:49,341 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-25 12:43:49,344 - INFO -  * Restarting with stat
+2025-05-25 12:43:51,056 - WARNING -  * Debugger is active!
+2025-05-25 12:43:51,062 - INFO -  * Debugger PIN: 114-573-710
+2025-05-25 12:43:52,812 - ERROR - Error calculating indicators: name 'talib' is not defined
+2025-05-25 12:43:52,816 - INFO - 127.0.0.1 - - [25/May/2025 12:43:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:44:16,224 - INFO -  * Detected change in 'C:\\Users\\sachin\\OneDrive\\Desktop\\BOT FINAL\\src\\app.py', reloading
+2025-05-25 12:44:16,566 - INFO -  * Restarting with stat
+2025-05-25 12:45:09,280 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.119.58:5000
+2025-05-25 12:45:09,280 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-25 12:45:09,286 - INFO -  * Restarting with stat
+2025-05-25 12:45:11,106 - WARNING -  * Debugger is active!
+2025-05-25 12:45:11,114 - INFO -  * Debugger PIN: 114-573-710
+2025-05-25 12:45:21,290 - INFO - 127.0.0.1 - - [25/May/2025 12:45:21] "GET / HTTP/1.1" 200 -
+2025-05-25 12:45:43,252 - INFO - 127.0.0.1 - - [25/May/2025 12:45:43] "GET / HTTP/1.1" 200 -
+2025-05-25 12:45:49,549 - INFO - 127.0.0.1 - - [25/May/2025 12:45:49] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:45:52,812 - INFO - 127.0.0.1 - - [25/May/2025 12:45:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:45:54,546 - INFO - 127.0.0.1 - - [25/May/2025 12:45:54] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:45:59,548 - INFO - 127.0.0.1 - - [25/May/2025 12:45:59] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:03,620 - INFO - 127.0.0.1 - - [25/May/2025 12:46:03] "GET / HTTP/1.1" 200 -
+2025-05-25 12:46:07,381 - INFO - 127.0.0.1 - - [25/May/2025 12:46:07] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:12,386 - INFO - 127.0.0.1 - - [25/May/2025 12:46:12] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:17,415 - INFO - 127.0.0.1 - - [25/May/2025 12:46:17] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:22,800 - INFO - 127.0.0.1 - - [25/May/2025 12:46:22] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:27,805 - INFO - 127.0.0.1 - - [25/May/2025 12:46:27] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:32,389 - INFO - 127.0.0.1 - - [25/May/2025 12:46:32] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:37,796 - INFO - 127.0.0.1 - - [25/May/2025 12:46:37] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:42,803 - INFO - 127.0.0.1 - - [25/May/2025 12:46:42] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:47,384 - INFO - 127.0.0.1 - - [25/May/2025 12:46:47] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:46:47,910 - INFO - 127.0.0.1 - - [25/May/2025 12:46:47] "[35m[1mGET / HTTP/1.1[0m" 500 -
+2025-05-25 12:46:48,386 - INFO - 127.0.0.1 - - [25/May/2025 12:46:48] "GET /?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 -
+2025-05-25 12:46:48,440 - INFO - 127.0.0.1 - - [25/May/2025 12:46:48] "GET /?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 -
+2025-05-25 12:46:48,666 - INFO - 127.0.0.1 - - [25/May/2025 12:46:48] "GET /?__debugger__=yes&cmd=resource&f=console.png&s=S3VigSOqlb9KlxoMayTA HTTP/1.1" 200 -
+2025-05-25 12:46:52,797 - INFO - 127.0.0.1 - - [25/May/2025 12:46:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:47:12,312 - INFO - 127.0.0.1 - - [25/May/2025 12:47:12] "GET /?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 -
+2025-05-25 12:47:52,800 - INFO - 127.0.0.1 - - [25/May/2025 12:47:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:48:52,800 - INFO - 127.0.0.1 - - [25/May/2025 12:48:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:49:47,278 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.119.58:5000
+2025-05-25 12:49:47,278 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-25 12:49:47,282 - INFO -  * Restarting with stat
+2025-05-25 12:49:49,441 - WARNING -  * Debugger is active!
+2025-05-25 12:49:49,460 - INFO -  * Debugger PIN: 114-573-710
+2025-05-25 12:49:50,536 - INFO - 127.0.0.1 - - [25/May/2025 12:49:50] "GET / HTTP/1.1" 200 -
+2025-05-25 12:49:51,273 - INFO - 127.0.0.1 - - [25/May/2025 12:49:51] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:49:52,806 - INFO - 127.0.0.1 - - [25/May/2025 12:49:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:49:56,275 - INFO - 127.0.0.1 - - [25/May/2025 12:49:56] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:49:59,239 - INFO - 127.0.0.1 - - [25/May/2025 12:49:59] "GET /auth HTTP/1.1" 200 -
+2025-05-25 12:50:06,795 - INFO - 127.0.0.1 - - [25/May/2025 12:50:06] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:11,797 - INFO - 127.0.0.1 - - [25/May/2025 12:50:11] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:16,805 - INFO - 127.0.0.1 - - [25/May/2025 12:50:16] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:21,792 - INFO - 127.0.0.1 - - [25/May/2025 12:50:21] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:26,815 - INFO - 127.0.0.1 - - [25/May/2025 12:50:26] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:31,790 - INFO - 127.0.0.1 - - [25/May/2025 12:50:31] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:36,796 - INFO - 127.0.0.1 - - [25/May/2025 12:50:36] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:41,792 - INFO - 127.0.0.1 - - [25/May/2025 12:50:41] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:46,795 - INFO - 127.0.0.1 - - [25/May/2025 12:50:46] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:51,801 - INFO - 127.0.0.1 - - [25/May/2025 12:50:51] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:52,817 - INFO - 127.0.0.1 - - [25/May/2025 12:50:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:50:56,802 - INFO - 127.0.0.1 - - [25/May/2025 12:50:56] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:01,801 - INFO - 127.0.0.1 - - [25/May/2025 12:51:01] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:06,802 - INFO - 127.0.0.1 - - [25/May/2025 12:51:06] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:11,813 - INFO - 127.0.0.1 - - [25/May/2025 12:51:11] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:16,804 - INFO - 127.0.0.1 - - [25/May/2025 12:51:16] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:21,805 - INFO - 127.0.0.1 - - [25/May/2025 12:51:21] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:26,801 - INFO - 127.0.0.1 - - [25/May/2025 12:51:26] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:31,802 - INFO - 127.0.0.1 - - [25/May/2025 12:51:31] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:36,798 - INFO - 127.0.0.1 - - [25/May/2025 12:51:36] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:41,809 - INFO - 127.0.0.1 - - [25/May/2025 12:51:41] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:46,801 - INFO - 127.0.0.1 - - [25/May/2025 12:51:46] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:51,810 - INFO - 127.0.0.1 - - [25/May/2025 12:51:51] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:52,800 - INFO - 127.0.0.1 - - [25/May/2025 12:51:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:51:56,801 - INFO - 127.0.0.1 - - [25/May/2025 12:51:56] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:52:01,805 - INFO - 127.0.0.1 - - [25/May/2025 12:52:01] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:52:52,802 - INFO - 127.0.0.1 - - [25/May/2025 12:52:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:52:52,808 - INFO - 127.0.0.1 - - [25/May/2025 12:52:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:53:52,801 - INFO - 127.0.0.1 - - [25/May/2025 12:53:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-25 12:53:52,810 - INFO - 127.0.0.1 - - [25/May/2025 12:53:52] "GET /market_data HTTP/1.1" 200 -
