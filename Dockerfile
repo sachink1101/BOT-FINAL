@@ -1,6 +1,5 @@
 FROM python:3.11-slim
 
-# Install system dependencies including TA-Lib
 RUN apt-get update && apt-get install -y \
     build-essential \
     wget \
@@ -12,15 +11,11 @@ RUN apt-get update && apt-get install -y \
     libta-lib0-dev \
     && rm -rf /var/lib/apt/lists/*
 
-# Set working directory
-WORKDIR /app
+RUN pip install --upgrade pip
 
-# Copy everything to container
+WORKDIR /app
 COPY . /app
 
-# Upgrade pip and install Python dependencies
-RUN pip install --upgrade pip
 RUN pip install -r requirements.txt
 
-# Run your app
-CMD ["python", "main.py"]
+CMD ["python", "app.py"]

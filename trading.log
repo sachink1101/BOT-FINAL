@@ -1792,3 +1792,127 @@
 2025-05-24 11:38:53,886 - INFO - 127.0.0.1 - - [24/May/2025 11:38:53] "GET /market_data HTTP/1.1" 200 -
 2025-05-24 11:38:58,896 - INFO - 127.0.0.1 - - [24/May/2025 11:38:58] "GET /market_data HTTP/1.1" 200 -
 2025-05-24 11:39:03,887 - INFO - 127.0.0.1 - - [24/May/2025 11:39:03] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:08,887 - INFO - 127.0.0.1 - - [24/May/2025 11:39:08] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:13,892 - INFO - 127.0.0.1 - - [24/May/2025 11:39:13] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:18,893 - INFO - 127.0.0.1 - - [24/May/2025 11:39:18] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:23,891 - INFO - 127.0.0.1 - - [24/May/2025 11:39:23] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:28,891 - INFO - 127.0.0.1 - - [24/May/2025 11:39:28] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:33,884 - INFO - 127.0.0.1 - - [24/May/2025 11:39:33] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:38,896 - INFO - 127.0.0.1 - - [24/May/2025 11:39:38] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:43,883 - INFO - 127.0.0.1 - - [24/May/2025 11:39:43] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:39:52,899 - INFO - 127.0.0.1 - - [24/May/2025 11:39:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:40:52,899 - INFO - 127.0.0.1 - - [24/May/2025 11:40:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:41:52,892 - INFO - 127.0.0.1 - - [24/May/2025 11:41:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:42:52,883 - INFO - 127.0.0.1 - - [24/May/2025 11:42:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:43:52,897 - INFO - 127.0.0.1 - - [24/May/2025 11:43:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:44:52,885 - INFO - 127.0.0.1 - - [24/May/2025 11:44:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:11,902 - INFO - 127.0.0.1 - - [24/May/2025 11:45:11] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:13,494 - INFO - 127.0.0.1 - - [24/May/2025 11:45:13] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:18,886 - INFO - 127.0.0.1 - - [24/May/2025 11:45:18] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:23,894 - INFO - 127.0.0.1 - - [24/May/2025 11:45:23] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:28,897 - INFO - 127.0.0.1 - - [24/May/2025 11:45:28] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:33,890 - INFO - 127.0.0.1 - - [24/May/2025 11:45:33] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:38,886 - INFO - 127.0.0.1 - - [24/May/2025 11:45:38] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:43,887 - INFO - 127.0.0.1 - - [24/May/2025 11:45:43] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:48,888 - INFO - 127.0.0.1 - - [24/May/2025 11:45:48] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:53,888 - INFO - 127.0.0.1 - - [24/May/2025 11:45:53] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:45:58,891 - INFO - 127.0.0.1 - - [24/May/2025 11:45:58] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:46:03,883 - INFO - 127.0.0.1 - - [24/May/2025 11:46:03] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:46:08,890 - INFO - 127.0.0.1 - - [24/May/2025 11:46:08] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:46:13,894 - INFO - 127.0.0.1 - - [24/May/2025 11:46:13] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:46:52,889 - INFO - 127.0.0.1 - - [24/May/2025 11:46:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:47:52,893 - INFO - 127.0.0.1 - - [24/May/2025 11:47:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:48:52,895 - INFO - 127.0.0.1 - - [24/May/2025 11:48:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:49:52,897 - INFO - 127.0.0.1 - - [24/May/2025 11:49:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:50:52,886 - INFO - 127.0.0.1 - - [24/May/2025 11:50:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:51:52,896 - INFO - 127.0.0.1 - - [24/May/2025 11:51:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:52:00,298 - INFO - 127.0.0.1 - - [24/May/2025 11:52:00] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:52:03,482 - INFO - 127.0.0.1 - - [24/May/2025 11:52:03] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:52:08,890 - INFO - 127.0.0.1 - - [24/May/2025 11:52:08] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:52:13,899 - INFO - 127.0.0.1 - - [24/May/2025 11:52:13] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:54:58,777 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.46.58:5000
+2025-05-24 11:54:58,777 - INFO - [33mPress CTRL+C to quit[0m
+2025-05-24 11:54:58,777 - INFO -  * Restarting with stat
+2025-05-24 11:54:59,907 - WARNING -  * Debugger is active!
+2025-05-24 11:54:59,917 - INFO -  * Debugger PIN: 114-573-710
+2025-05-24 11:55:34,124 - INFO - 127.0.0.1 - - [24/May/2025 11:55:34] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:55:36,597 - INFO - 127.0.0.1 - - [24/May/2025 11:55:36] "GET /auth HTTP/1.1" 200 -
+2025-05-24 11:55:49,191 - INFO - 127.0.0.1 - - [24/May/2025 11:55:49] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:55:54,856 - INFO - 127.0.0.1 - - [24/May/2025 11:55:54] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:55:59,192 - INFO - 127.0.0.1 - - [24/May/2025 11:55:59] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:01,704 - INFO - 127.0.0.1 - - [24/May/2025 11:56:01] "GET /auth HTTP/1.1" 200 -
+2025-05-24 11:56:14,828 - INFO - 127.0.0.1 - - [24/May/2025 11:56:14] "GET / HTTP/1.1" 200 -
+2025-05-24 11:56:14,978 - INFO - 127.0.0.1 - - [24/May/2025 11:56:14] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:19,991 - INFO - 127.0.0.1 - - [24/May/2025 11:56:19] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:20,213 - DEBUG - Using proactor: IocpProactor
+2025-05-24 11:56:20,213 - INFO - 127.0.0.1 - - [24/May/2025 11:56:20] "POST /start_trading HTTP/1.1" 200 -
+2025-05-24 11:56:20,227 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2025-05-24 11:56:22,623 - DEBUG - https://api.telegram.org:443 "GET /bot7734973822:AAF4bD4SxEqJ4CKaJzakF4gRD4vIZp8bS_8/getMe HTTP/1.1" 200 246
+2025-05-24 11:56:22,627 - INFO - Telegram Bot Token validated
+2025-05-24 11:56:22,632 - DEBUG - Starting new HTTPS connection (1): api.telegram.org:443
+2025-05-24 11:56:23,445 - DEBUG - https://api.telegram.org:443 "POST /bot7734973822:AAF4bD4SxEqJ4CKaJzakF4gRD4vIZp8bS_8/sendMessage HTTP/1.1" 200 319
+2025-05-24 11:56:23,449 - INFO - Telegram Chat ID validated
+2025-05-24 11:56:23,464 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:23,741 - DEBUG - https://api.upstox.com:443 "GET /v2/user/profile HTTP/1.1" 200 None
+2025-05-24 11:56:23,752 - INFO - Access token validated
+2025-05-24 11:56:23,754 - INFO - Using stored access token
+2025-05-24 11:56:23,757 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:23,966 - DEBUG - https://api.upstox.com:443 "GET /v2/option/contract?instrument_key=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-24 11:56:24,025 - WARNING - No weekly expiries found, using fallback
+2025-05-24 11:56:24,029 - INFO - Starting trading for Nifty 50 (Expiry: 2025-05-28)
+2025-05-24 11:56:24,029 - WARNING - No recent REST data, retrying
+2025-05-24 11:56:24,036 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:24,238 - DEBUG - https://api.upstox.com:443 "GET /v2/market-quote/ltp?instrument_key=NSE_INDEX%7CNifty+50%2CNSE_INDEX%7CIndia+VIX HTTP/1.1" 200 None
+2025-05-24 11:56:24,245 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:24,407 - DEBUG - https://api.upstox.com:443 "GET /v2/option/contract?instrument_key=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-24 11:56:24,459 - DEBUG - REST data updated: Spot=23850, VIX=15.0
+2025-05-24 11:56:25,856 - INFO - 127.0.0.1 - - [24/May/2025 11:56:25] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:29,472 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:29,659 - DEBUG - https://api.upstox.com:443 "GET /v2/market-quote/ltp?instrument_key=NSE_INDEX%7CNifty+50%2CNSE_INDEX%7CIndia+VIX HTTP/1.1" 200 None
+2025-05-24 11:56:29,667 - DEBUG - Starting new HTTPS connection (1): api.upstox.com:443
+2025-05-24 11:56:29,907 - DEBUG - https://api.upstox.com:443 "GET /v2/option/contract?instrument_key=NSE_INDEX%7CNifty+50 HTTP/1.1" 200 None
+2025-05-24 11:56:29,950 - DEBUG - REST data updated: Spot=23850, VIX=15.0
+2025-05-24 11:56:29,991 - INFO - 127.0.0.1 - - [24/May/2025 11:56:29] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:32,472 - INFO - 127.0.0.1 - - [24/May/2025 11:56:32] "POST /stop_trading HTTP/1.1" 200 -
+2025-05-24 11:56:34,989 - INFO - 127.0.0.1 - - [24/May/2025 11:56:34] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:40,858 - INFO - 127.0.0.1 - - [24/May/2025 11:56:40] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:45,864 - INFO - 127.0.0.1 - - [24/May/2025 11:56:45] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:49,991 - INFO - 127.0.0.1 - - [24/May/2025 11:56:49] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:56:54,283 - ERROR - Error generating performance dashboard: Execution failed on sql 'SELECT * FROM trades': no such table: trades
+2025-05-24 11:56:54,287 - INFO - 127.0.0.1 - - [24/May/2025 11:56:54] "GET /dashboard HTTP/1.1" 200 -
+2025-05-24 11:56:57,509 - INFO - 127.0.0.1 - - [24/May/2025 11:56:57] "GET / HTTP/1.1" 200 -
+2025-05-24 11:56:57,678 - INFO - 127.0.0.1 - - [24/May/2025 11:56:57] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:02,687 - INFO - 127.0.0.1 - - [24/May/2025 11:57:02] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:07,688 - INFO - 127.0.0.1 - - [24/May/2025 11:57:07] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:12,858 - INFO - 127.0.0.1 - - [24/May/2025 11:57:12] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:17,860 - INFO - 127.0.0.1 - - [24/May/2025 11:57:17] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:22,687 - INFO - 127.0.0.1 - - [24/May/2025 11:57:22] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:24,043 - INFO - Trading session ended
+2025-05-24 11:57:27,857 - INFO - 127.0.0.1 - - [24/May/2025 11:57:27] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:32,858 - INFO - 127.0.0.1 - - [24/May/2025 11:57:32] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:37,861 - INFO - 127.0.0.1 - - [24/May/2025 11:57:37] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:42,867 - INFO - 127.0.0.1 - - [24/May/2025 11:57:42] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:47,866 - INFO - 127.0.0.1 - - [24/May/2025 11:57:47] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:52,687 - INFO - 127.0.0.1 - - [24/May/2025 11:57:52] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:57:57,682 - INFO - 127.0.0.1 - - [24/May/2025 11:57:57] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:02,467 - INFO - 127.0.0.1 - - [24/May/2025 11:58:02] "GET / HTTP/1.1" 200 -
+2025-05-24 11:58:02,739 - INFO - 127.0.0.1 - - [24/May/2025 11:58:02] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:02,857 - INFO - 127.0.0.1 - - [24/May/2025 11:58:02] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:06,111 - INFO - 127.0.0.1 - - [24/May/2025 11:58:06] "GET /auth HTTP/1.1" 200 -
+2025-05-24 11:58:07,865 - INFO - 127.0.0.1 - - [24/May/2025 11:58:07] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:18,878 - INFO - 127.0.0.1 - - [24/May/2025 11:58:18] "GET / HTTP/1.1" 200 -
+2025-05-24 11:58:19,192 - INFO - 127.0.0.1 - - [24/May/2025 11:58:19] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:24,204 - INFO - 127.0.0.1 - - [24/May/2025 11:58:24] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:29,206 - INFO - 127.0.0.1 - - [24/May/2025 11:58:29] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:34,204 - INFO - 127.0.0.1 - - [24/May/2025 11:58:34] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:39,864 - INFO - 127.0.0.1 - - [24/May/2025 11:58:39] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:44,863 - INFO - 127.0.0.1 - - [24/May/2025 11:58:44] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:49,868 - INFO - 127.0.0.1 - - [24/May/2025 11:58:49] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:54,860 - INFO - 127.0.0.1 - - [24/May/2025 11:58:54] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:58:59,868 - INFO - 127.0.0.1 - - [24/May/2025 11:58:59] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:59:04,866 - INFO - 127.0.0.1 - - [24/May/2025 11:59:04] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 11:59:09,860 - INFO - 127.0.0.1 - - [24/May/2025 11:59:09] "GET /market_data HTTP/1.1" 200 -
+2025-05-24 21:49:16,055 - INFO - 127.0.0.1 - - [24/May/2025 21:49:16] "GET /market_data HTTP/1.1" 200 -
